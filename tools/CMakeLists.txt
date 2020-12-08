@@ -107,6 +107,7 @@ install(TARGETS fax2ps
                 tiffmedian
                 tiffset
                 tiffsplit
+        BUNDLE DESTINATION "${CMAKE_INSTALL_FULL_BINDIR}"
         RUNTIME DESTINATION "${CMAKE_INSTALL_FULL_BINDIR}")
 
 if(HAVE_OPENGL)
@@ -121,6 +122,7 @@ if(HAVE_OPENGL)
   target_link_libraries(tiffgt tiff port ${GLUT_LIBRARIES} ${OPENGL_LIBRARIES})
 
   install(TARGETS tiffgt
+        BUNDLE DESTINATION "${CMAKE_INSTALL_FULL_BINDIR}"
           RUNTIME DESTINATION "${CMAKE_INSTALL_FULL_BINDIR}")
 endif()
 
